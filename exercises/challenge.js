@@ -1,11 +1,11 @@
 /*
 =============== JS Aircraft Queue Challenge ==================
 GOAL: Read each question and write code to complete each task
-      given. Do not change starter code or function names.
-      
+    given. Do not change starter code or function names.
+
 TEST: To test run the commands `npm run test` in your terminal
-      at the root of this directory.(js-aircraft-queue-challenge)
-      Don't worry about capitalization.
+    at the root of this directory.(js-aircraft-queue-challenge)
+    Don't worry about capitalization.
 */
 
 /*
@@ -46,16 +46,50 @@ const ATCQueue = function () {
 }
 
 ATCQueue.prototype.aircraftCount = function () {
-
+	return this.aircraftQueue.length
 }
 
 ATCQueue.prototype.enqueue = function (aircraft) {
-
+	this.aircraftQueue.push(aircraft)
 }
 
 ATCQueue.prototype.dequeue = function () {
-    
-}
+	const aircraftQueue = this.aircraftQueue
 
+
+// 	const largePassenger = aircraftQueue.find((aircraft) => {
+// 		return aircraft.type === 'passenger' && aircraft.size === 'large'
+// 	})
+// 	const smallPassenger = aircraftQueue.find(
+// 		(aircraft) => aircraft.type === 'passenger' && aircraft.size === 'small'
+// 	)
+// 	const largeCargo = aircraftQueue.find(
+// 		(aircraft) => aircraft.type === 'cargo' && aircraft.size === 'large'
+// 	)
+// 	const smallCargo = aircraftQueue.find(
+// 		(aircraft) => aircraft.type === 'cargo' && aircraft.size === 'small'
+// 	)
+
+// 	const Priority = largePassenger || smallPassenger || largeCargo || smallCargo
+
+// 	aircraftQueue.splice(aircraftQueue.indexOf(Priority), 1)
+
+	
+// 	return Priority
+}
 // DO NOT MODIFY
 module.exports = ATCQueue
+
+
+// largePassenger  1st priority 
+// smallPassenger  2nd priority 
+// largeCargo      3rd priority 
+// smallCargo      4th priority 
+
+
+// make an array to hold the aircraft
+// find the aircraft size and type
+// search for priority aircraft 
+// removing that aircraft and look again for next priority 
+//
+//
